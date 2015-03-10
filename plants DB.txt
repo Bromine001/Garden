@@ -1,0 +1,378 @@
+-- phpMyAdmin SQL Dump
+-- version 4.2.10
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost:3306
+-- Generation Time: Jan 22, 2015 at 07:06 PM
+-- Server version: 5.5.38
+-- PHP Version: 5.6.2
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `Plants`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `history`
+--
+
+CREATE TABLE `history` (
+  `plantID` smallint(3) unsigned NOT NULL,
+  `user` varchar(28) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `germination` varchar(12) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `transplant` varchar(12) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `catnum` varchar(36) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `seedyear` varchar(12) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `numplanted` smallint(3) NOT NULL,
+  `variety` varchar(64) NOT NULL DEFAULT 'unknown',
+  `notes` mediumtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `year` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `history`
+--
+
+INSERT INTO `history` (`plantID`, `user`, `germination`, `transplant`, `catnum`, `seedyear`, `numplanted`, `variety`, `notes`, `year`) VALUES
+(1, 'Pushkin', '', '', 'Catalogue number', '3', 0, 'varietal', 'notes ', '2015-01-14 16:21:38'),
+(1, 'Pushkin', '', '', 'Catalogue number', '3', 0, 'varietal', 'notes ', '2015-01-14 16:24:42'),
+(1, 'Pushkin', '', '', 'Catalogue number', '3', 0, 'varietal', 'notes ', '2015-01-14 16:24:49'),
+(2, 'Pushkin', '', '', 'Catalogue number', '3', 0, 'varietal', 'notes ', '2015-01-14 16:27:06'),
+(14, 'Pushkin', '', '', 'Catalogue number', '3', 0, 'varietal', 'notes ', '2015-01-14 16:27:17'),
+(9, 'ChainRingTattoo', '', '', 'Catalogue number', '3', 0, 'varietal', 'notes ', '2015-01-14 21:49:50'),
+(9, 'ChainRingTattoo', '2015-01-07', '2015-01-31', 'Catalogue number', '3', 0, 'varietal', 'notes ', '2015-01-14 21:49:52'),
+(1, 'ChainRingTattoo', '', '', 'Catalogue number', '3', 0, 'varietal', 'notes ', '2015-01-14 21:49:54'),
+(11, 'ChainRingTattoo', '', '', 'Catalogue number', '3', 0, 'varietal', 'notes ', '2015-01-14 21:49:57'),
+(14, 'ChainRingTattoo', '', '', 'Catalogue number', '3', 0, 'varietal', 'notes ', '2015-01-14 21:50:02'),
+(14, 'ChainRingTattoo', '', '', 'Catalogue number', '3', 0, 'varietal', 'notes ', '2015-01-14 21:50:06'),
+(7, 'ChainRingTattoo', '', '', 'Catalogue number', '3', 0, 'varietal', 'notes ', '2015-01-14 21:50:09'),
+(34, 'ChainRingTattoo', '2015-01-31', '', 'saved from last year', '3', 0, 'big horn', 'notes ', '2015-01-14 21:54:48'),
+(38, 'ChainRingTattoo', '2015-01-31', '', 'Baker Creek TM023', '3', 0, 'Amish Paste', 'We will write a lot about tomatos. Lots and lots. \r\nBacon ipsum dolor amet picanha shoulder meatloaf boudin filet mignon, beef landjaeger tail. Biltong chicken frankfurter andouille. Tail flank chuck, ham pork loin ribeye porchetta venison landjaeger sausage pancetta pork shoulder tri-tip pork chop. Jerky leberkas fatback picanha, chuck turkey andouille drumstick shankle pancetta short ribs doner corned beef ham hock jowl.\r\n\r\nShoulder tail ham hock beef sirloin corned beef landjaeger. Brisket cow pork pork loin, beef tongue pancetta kevin alcatra andouille tail meatball boudin fatback short loin. Beef ribs drumstick fatback venison hamburger jerky landjaeger pastrami ball tip meatball. Picanha swine fatback pastrami pancetta corned beef tri-tip chicken boudin.\r\n\r\n', '2015-01-14 21:59:25'),
+(4, 'Jeff', '', '', 'n/a', '3', 0, 'Green Crown!', 'notes', '2015-01-18 16:28:47'),
+(54, 'ChainRingTattoo', '', '', 'suckit!', '3', 0, 'none', 'notes', '2015-01-20 15:57:45'),
+(4, 'Pushkin', '', '', 'Catalogue number', '3', 0, 'varietal', 'notes', '2015-01-20 20:30:26'),
+(3, 'Pushkin', '', '', 'Catalogue number', '3', 0, 'varietal', 'notes', '2015-01-20 20:30:30'),
+(4, 'Pushkin', '', '', 'Catalogue number', '3', 0, 'varietal', 'notes', '2015-01-20 20:30:34'),
+(4, 'Pushkin', '', '', 'Catalogue number', '3', 0, 'varietal', 'notes', '2015-01-20 20:30:36'),
+(3, 'Pushkin', '', '', 'Catalogue number', '3', 0, 'varietal', 'notes ', '2015-01-20 20:30:39'),
+(4, 'Pushkin', '', '', 'Catalogue number', '3', 0, 'varietal', 'notes', '2015-01-20 20:30:42'),
+(5, 'Pushkin', '', '', 'Catalogue number', '3', 0, 'varietal', 'notes', '2015-01-20 20:30:45'),
+(5, 'Pushkin', '', '', 'Catalogue number', '3', 0, 'varietal', 'notes', '2015-01-20 20:30:49'),
+(54, 'Chainringtattoo', '', '', 'Catalogue number', '3', 0, 'varietal', 'notes', '2015-01-21 19:43:01'),
+(17, 'Chainringtattoo', '2015-01-05', '2015-01-30', 'Catalogue number', '', 3, 'varietal', 'notes', '2015-01-21 19:56:07'),
+(54, 'Chainringtattoo', '2015-01-01', '2015-06-27', 'x01', '', 6, '..', 'notes go here! and still', '2015-01-21 19:56:24'),
+(62, 'gonzo', '', '', 'Catalogue number', '', 1, 'varietal', 'notes Love parsley!', '2015-01-21 21:19:32'),
+(0, 'bonehead5', '', '', 'Unknown', '', 1, 'example', 'This is your frst sample plant', '2015-01-21 21:30:38'),
+(60, 'Pushkin', '', '', 'Catalogue number', '', 1, 'varietal', 'notes', '2015-01-22 15:03:23'),
+(0, 'Skullcrusher', '', '', 'Unknown', '', 1, 'example', 'This is your frst sample plant. use the button to the side to edit or delete. Use the menu along the top to add more.', '2015-01-22 15:05:03'),
+(7, 'Pushkin', '', '', 'Catalogue number', '', 1, 'varietal', 'notes', '2015-01-22 15:14:23'),
+(56, 'Pushkin', '', '', 'Catalogue number', '', 1, 'varietal', 'notes', '2015-01-22 15:17:46'),
+(63, 'Pushkin', '', '', 'Catalogue number', '', 1, 'varietal', 'FIREFOX WORKS FINE&gt;', '2015-01-22 15:19:29'),
+(1, 'Pushkin', 'date germina', '10/12/2015', 'Catalogue number', '', 12, 'varietal', 'Amaranth will be fun to grow!', '2015-01-22 15:58:08');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `plants`
+--
+
+CREATE TABLE `plants` (
+`plantID` int(3) unsigned NOT NULL,
+  `name` varchar(28) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `genus` varchar(28) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `sun` varchar(36) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `soil` varchar(180) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `spacing` varchar(36) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `lifespan` varchar(36) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `time` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `notes` mediumtext NOT NULL,
+  `type` varchar(28) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=MyISAM AUTO_INCREMENT=64 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `plants`
+--
+
+INSERT INTO `plants` (`plantID`, `name`, `genus`, `sun`, `soil`, `spacing`, `lifespan`, `time`, `notes`, `type`) VALUES
+(1, 'Amaranth', 'Amaranthus', 'Full Sun', 'rich soil', '2-3'' per plant', 'Annual', 'Direct sew in garden after danger of frost has passed.', 'Attractive and easy to grow, this ancient grain will often reseed itself.\r\nPlant seeds more thickly and thin as they sprout, individual plants become large.', 'veg'),
+(2, 'Artichoke', 'Cynara scolymus', 'Full Sun', 'Rich loam soil', '2''', 'Perennial in mild climates (see note', 'Germinate seeds 12 weeks before the last expected frost. Transplant seedlings into cold frames 6 weeks before last expected frost. Transplant into garden after danger of frost has passed. \r\nIn warmer climates, start indoors and transplant outside when temperatures stay above 50 degrees.', 'Very tricky to grow in climates cooler than Zone 7. In cooler climates, you can dig and save the roots like bulbs. ', 'veg'),
+(3, 'Cardoon', 'Cyanara Cardunculus', 'Full Sun-partial shade', 'well drained soil, rich in organics', '', 'Annual, Perennial in warmer zones', 'Germinate indoors 3 weeks before last expected frost date. Transplant outside 3-4 weeks after last frost date. ', 'Grown for its fresh leaf stalks. Normally blanched and eaten like celery. Member of the Artichoke family. ', 'veg'),
+(4, 'Asparagus', 'Asparagus officinalis', 'full Sun', 'work in a lot of organic material when preparing bed (see notes)', '2'' per plant, 4'' wide bed', 'Perennial', 'Often started from crowns, can be started from seed. Plant crowns 6-8 inches deep down the center of a 4'' wide bed. Top with 2-3" of soil. Add soil periodically until it is slightly mounded. Keep well weeded and then mulched once shoots come up.', 'Begin harvesting shoots from 3 year old plants, not earlier. Asparagus is easy to grow and rewarding if you plan on staying in one place for several years. Plants can live 20 years or more, but take years to establish. Starting the third year, trim shoots off at ground level until new shoots begin to look leggy. Allow to grow into giant ferns the rest of the season. ', 'veg'),
+(5, 'Beans, fresh pole habit', 'Fabaceae (many species)', 'Full Sun', 'well drained and friable', '4-6" ', 'Annual', 'Soak seeds over night before planting. Direct sew in the garden, 1-1.5" deep at the base of poles or a trellis. Plant after soil has warmed up to over 50 deg. F. In heavier soil, do not cover seeds with garden soil, but use potting soil or vermiculite to allow the shoots to break through the surface. ', 'Beans are easy and fun to grow. Pole beans are wonderful if you are a lazy gardener, as they will quickly grow above the level of weeds in your garden, and won''t be choked out. Fresh green beans can be tricky to harvest, as the beans themselves will be a vary similar color to the leaves they are hiding amongst. Most varieties of fresh (or snap) beans are stringless, but any beans will develop strings if allowed to mature on the vine too long. ', 'veg'),
+(6, 'Beans, dry pole habit', 'Fabaceae (many species)', 'Full Sun ', 'well drained and friable', '4-6"', 'Annual', 'Soak seeds over night before planting. Direct sew in the garden, 1-1.5" deep at the base of poles or a trellis. Plant after soil has warmed up to over 50 deg. F. In heavier soil, do not cover seeds with garden soil, but use potting soil or vermiculite to allow the shoots to break through the surface. ', 'Beans are easy and fun to grow. Pole beans are wonderful if you are a lazy gardener, as they will quickly grow above the level of weeds in your garden, and won''t be choked out. Allow pods to dry completely on the vine before harvesting or harvest when pods are leathery and allow to dry completely indoors. break pods open and dump beans into a container when processing. ', 'veg'),
+(7, 'beans, fresh bush habit', 'Fabaceae (many species)', 'Full Sun', 'well drained and friable', '6" per plant, 1-2'' rows', 'Annual', 'Soak seeds over night before planting. Direct sew in the garden, 1-1.5" deep spaced 4-6" apart. Plant after soil has warmed up to over 50 deg. F. In heavier soil, do not cover seeds with garden soil, but use potting soil or vermiculite to allow the shoots to break through the surface. ', 'Beans are easy and fun to grow. Bush beans are generally more productive than pole beans, but require careful weeding. Beans are rooted shallowly, so care is needed in hoeing out weeds around them.  Fresh green beans can be tricky to harvest, as the beans themselves will be a vary similar color to the leaves they are hiding amongst. Most varieties of fresh (or snap) beans are stringless, but any beans will develop strings if allowed to mature on the vine too long. ', 'veg'),
+(8, 'Beans, dry bush habit', 'Fabaceae (many species)', 'Full Sun', 'well drained and friable', '6" per plant, 1-2'' rows', 'Annual', 'Soak seeds over night before planting. Direct sew in the garden, 1-1.5" deep spaced 4-6" apart. Plant after soil has warmed up to over 50 deg. F. In heavier soil, do not cover seeds with garden soil, but use potting soil or vermiculite to allow the shoots to break through the surface. ', 'Beans are easy and fun to grow. Bush beans are generally more productive than pole beans, but require careful weeding. Beans are rooted shallowly, so care is needed in hoeing out weeds around them. Allow pods to dry completely on the vine before harvesting or harvest when pods are leathery and allow to dry completely indoors. break pods open and dump beans into a container when processing. ', 'veg'),
+(9, 'Beets', 'Beta vulgaris', 'Full Sun', 'Well drained, deeply worked', '12-18" rows, thin seedlings to 2-4"', 'Biennnnial', 'Direct sew about 4 weeks before last expected frost date or about 8 weeks before first frost date. Can be sewn every two weeks to stagger harvest. Don''t plant when daily temps are over 75 deg. F. Soak in water a few hours before planting.', 'Beets have been a staple crop in many cultures for thousands of years. Can be grown for roots or for greens. Store in root cellar or overwinter in mild climates. ', 'veg'),
+(10, 'Bok Choy', 'Brassica rapa', '', 'Rich, loose soil', '6-10", rows 18-30"', 'Annual', 'Germinate 2 weeks before last frost date, transplant after danger of frost is past or direct sew about last frost date. Start a second crop indoors or direct sew 7-8 weeks before first frost date. ', 'Bok Choy is a non heading cabbage. It needs to be harvested before the summer heat sets in, as it will bolt very quickly, though it can survive mild frost. Harvest when plants are 12-18" tall. ', 'veg'),
+(11, 'Broccoli', 'Brassica oleracea', 'Full Sun', 'Moist, fertile soil', '12-24" Rows 36" ', 'Annual', 'Work compost or manure into soil before planting. Plant seeds 1/2" deep or set transplants slightly deeper. Plant in fall, 85 to 100 days before first frost date. Or germinate seeds 7-9 weeks before last frost date, and transplant 2-3 weeks before last frost date. Fall plantings are preferred in warmer climates', 'Broccoli is a cool weather crop, and will bolt in hot weather. Crowns require cold weather to develop. Harvest while heads are firm and green, before flowers open up.', 'veg'),
+(12, 'Brussel Sprouts', 'Brassica oleracea, Gemmifera', 'Full Sun ', 'Fertile, well drained', '18-24", row 30"', 'Annual', 'Plant seeds 1/2" deep, thin sprouts.  Germinate 6-8 weeks before last frost date, then transplant at last expected frost date or direct sew 4 months before first frost date. Set transplants deeper than seeds, almost to bottom leaves. ', 'The hardiest of the cabbage family, Brussel Sprouts can survive freezing temperatures, but will pout in hot weather. Sprouts that develop in the summer heat will be bitter, fall plantings are preferred in warmer climates. Harvest starting at the bottom of the stalk when sprouts are 1" in diameter. ', 'veg'),
+(13, 'Cabbage', 'Brassica oleracea, Capitata', 'Full Sun', 'Rich, well drained', '12-24"', 'Annual', 'Germinate seeds indoors 6-8 weeks before last frost date, harden off for a week and transplant outdoors 2-3 weeks before last frost date. Or start seeds indoors 12-14 weeks before first frost date, and transplant outdoors when they are 4-6 weeks old. ', 'Cabbage is hardy and can survive freezing temperatures. It will bolt in hot weather. Crop rotation is important, it will stave off pests and diseases. Harvest with a sharp knife when heads are firm. Early varieties can be left to grow a second head, though you should pull up the plant and root when harvesting if you don''t expect another crop to help prevent disease and pests. ', 'veg'),
+(14, 'Carrots', 'Daucus carota', 'Shade when sprouting, Full sun after', 'Loose and free of stones', 'Thin to 1" when tops are 2", thin to', 'Binneal', 'Use a well loosened bed or a raised bed. Direct sew 3 weeks before last frost date, plant again every 2-3 weeks to stagger harvest. Place a tiny pinch of about six seeds per inch when planting. Mix in about 15% radish seeds to help to mark your carrot rows and to help shade the carrots as they sprout. ', 'Carrots are a fun project, but take about 85 days to develop, so be sure to start them early. In warmer climates, carrots can be grown through the winter. Thinning is critically important with carrots, as crowded carrots won''t develop fully and will be crooked. If you are planting in heavy or stony soil, choose a round or stubby carrot variety, as they can better handle heavier soils. ', 'veg'),
+(15, 'Cauliflower', 'Brassica oleracea', 'Full Sun', 'loose and rich', '12-24"', 'Annual', 'Germinate seeds indoors 6-8 weeks before last frost date, harden off for a week and transplant outdoors 2-3 weeks before last frost date. Or start seeds indoors 12-14 weeks before first frost date, and transplant outdoors when they are 4-6 weeks old. ', 'Cauliflower is very sensititve to extreme temperatures. A cool weather crop, heads won''t develop in the heat of summer. Choose a cultivar that is suitable for your climate, and will develop mature heads before winter sets in. Do not allow the soil around it to dry completely, or it will leave your cauliflower dry. Once the heads of white cultivars develop, shade them by "blanching" to prevent them turning yellow or brown. ', 'veg'),
+(16, 'Celery', 'Apium graveolens', 'out of direct sun', '', '6-8", rows 2-3''', 'Annual', 'Celery is best grown as a fall crop in most moderate climates. Germinate in a mixture of sand and compost 10-12 weeks before first frost date, harden off when sprouts get to 6" tall. Transplant into a bed when the heat of summer is past.', 'Celery from your garden will bear only a passing resemblance to celery from the grocery store. Garden celery is much firmer, with a much stronger flavor. It is best to think of garden and grocery store celeries as completely separate vegetables. You can either cut with a knife at the soil line to harvest or cut individual ribs as needed. ', 'veg'),
+(17, 'Collard greens', 'Brassica oleracea, Acephala', 'Full Sun or light shade', 'Any', '12", rows 3''', 'Annual', 'Loosen soil and work in some organic amendments 6-8 weeks before last expected frost. Direct sow 4 weeks before last frost date. For a fall crop, sow 8-10 weeks before first expected frost. ', 'Collards are great for warmer climates, where cabbage and kale will bolt. Still a cool weather crop, Collards mature quickly and are nearly as frost resistant as the Brassica family. To harvest, simply start cutting outside leaves when plants are 12" tall.', 'veg'),
+(18, 'Corn', 'Zea mays', 'Full Sun ', 'Very rich in nitrogen', '15", 24" rows.', 'Annual', 'Corn is very susceptible to frosts, so direct sow it after all danger of frost is past and the soil warms up to 60 deg. F. Plant 1-2" deep. Germination is poor, so plant 2-3 seeds together every 7-15" in your row.', 'Fresh sweet corn is incredible. An old friend of mine used to insist that corn shouldn''t be picked from the garden until the cooking water was boiling. I''m not sure about that, but the sugars in sweet corn do start turning into starch the moment it is picked, so fresh sweet corn should be used promptly in any case. Corn takes a lot of space in the garden, and must be placed carefully so as not to shade other plants, but many gardeners make it a priority. Corn is a very heavy feeder, especially nitrogen, so either choose a site for it that has had nitrogen fixing crops for a season or two or generously apply manure or compost to your corn patch. Most stalks make 1-2 ears each, so plan on 10-15 plants per household member per season. You can stagger harvest with slower or quicker growing cultivars.', 'veg'),
+(19, 'Cowpeas', 'Vigna unguiculata', 'Full Sun', 'Rich, well drained', '4", train to trellises', 'Annual', 'Direct sow after the last frost date, and after soil has warmed. Plant 1/2 to 1" deep, space seeds 2" apart.', 'Cowpeas are more tolerant of drought and of heat than traditional beans, making them a good choice for warmer climates. Eat young pods like fresh beans, or let pods dry on the vine, then pick and process like shell beans. Train them onto a trellis or pole as you would pole beans. Cowpeas do not produce heavily, plan on several plants per person to make a decent crop.', 'veg'),
+(20, 'Cucumbers', 'Cucumis sativus', 'Full Sun ', 'Rich soil', '12-18", train to trellises', 'Annual', 'For an early crop, start cumbers indoors 3 weeks before last frost date. Direct sow or harden off and transplant no earlier than 2 weeks after the last frost date. Plant seeds 1" deep. ', 'Cucumbers are a warm weather crop that want warm, moist soil. Do not let them dry out. Excessive heat will make them fail to set fruit. Harvest often, every day or two during the height of the season. Leaving cucumbers on the vine too long will reduce your harvest and degrade the cucumbers you do have. ', 'veg'),
+(21, 'Eggplant', 'Solanum melongena', 'Full Sun', 'rich soil', '3'' in all directions', 'Annual', 'Germinate 6-9 weeks before last predicted frost. Soak seeds overnight to encourage germination. Sow 1/4" deep. Use a bottom heat to maintain a high soil temperature. Harden them off slowly and throughly and transplant after soil has warmed up. ', 'Eggplants are kind of fussy, not unlike their close relative, the tomato. On the other had, they are very attractive little plants. Enough so that they can go in a border or the front yard. Most varieties are ready to harvest when the skin turns glossy. Treat harvested eggplants gently, they bruise easily.', 'veg'),
+(22, 'Escarole', 'Cichorium endivia', 'Full Sun', 'hummus rich soil', '12"', 'Annual', 'Direct sow 90 days before the first frost date, stagger plantings by 2 weeks to stagger harvest. Broadcast seeds and cover with 1/4" soil, sand, or compost. Thin seedlings to 12" in all directions. ', 'Eat as a green. You can blanch in the garden for creamy yellow hearts. ', 'veg'),
+(23, 'Endive', 'Cichorium endivia', 'Full Sun ', 'hummus rich soil', '12"', 'Annual', 'Direct sow 90 days before the first frost date, stagger plantings by 2 weeks to stagger harvest. Broadcast seeds and cover with 1/4" soil, sand, or compost. Thin seedlings to 12" in all directions. ', 'Eat as a green. You can blanch in the garden for creamy yellow hearts. ', 'veg'),
+(24, 'Fennel', 'Foeniculum Vulgare', 'Full Sun', 'Well Drained', '10-12" apart', 'Annual', 'Direct seed after danger of frost has past. Cover with 1/4" of soil. ', 'Fennel is native to the Mediterranean region, but is now cultivated worldwide. It is an aromatic perennial that grows to about five feet in height, having dark green, feathery leaves, umbels of yellow flowers, and small, ridged, oval-shaped seeds, which are gathered in the autumn. The tall stalk looks like celery and is often consumed as vegetables, while the leaves and seeds are used to flavor foods. Although the taste and aroma of fennel are sometimes mistaken for anise or licorice, the plant is actually related to caraway.\r\n\r\nStake plants when they reach 18" tall, they will grow to about 5''.', 'veg'),
+(25, 'Garlic', 'Allium sativum', 'Full Sun', 'Loose, loamy', '4-6", 8-12" rows', 'Annual', 'Plant individual cloves 6-8 weeks before your first frost date. Plant two inches deep for good root development. Mulch heavily, shoots my not emerge until spring. ', 'Garlic is delicious and easy to grow. You can start it with garlic from the grocery store. Plant larger cloves, and eat smaller ones. Harvest in the summer before the weather gets too hot and the ground dries out. Traditionally, when the outside four leaves die garlic is ready to harvest. Allow to cure in a well ventilated place out of the sun. It should keep well. ', 'veg'),
+(26, 'Onions', 'Allium cepa', 'Full Sun', 'Well drained, loose', 'seeds 1/2" apart, seedlings 4" apart', 'Annual', 'Can be direct seeded, started from seed inside, or started from sets. To direct seed, plant seeds 1/4" deep and 1/2" apart in 12-18" rows. Thin as seedlings. Start transplants 8 to 10 weeks before your last frost date. Set out after the weather has warmed up. For sets, choose small bulbs, as larger ones are prone to bolt. Plant 1 inch deep 2-4 weeks before your last frost date.', 'Onions are easy to grow, and take up fairly little space. You may need a large space if you plan to plant all of your onions, though. \r\nI recommend starting with sets the first time you plant onions, as the seedlings are delicate and can be tricky to transplant. \r\nI don''t recommend direct seeding, as the season is not long enough in most areas to allow a harvest before the first frost. ', 'veg'),
+(27, 'Kale', 'Brassica oleracea', 'Full Sun or light shade (see notes)', 'Well drained', '12-18", rows 18-24"', 'Annual', 'Can be grown as a spring crop or as a fall crop. Fall is best, direct seed about 12 weeks before the first expected frost. Plant seeds 1/4" deep, 1" apart. Thin seedlings, eat thinned plants. ', 'Kale is tasty and very popular. It''s fairly easy to grow, harvest before it gets too big and tough for salad, leave longer for stir fry or soup.\r\nKale wants full sun in the fall or spring, but prefers light shade in hotter parts of the year. \r\nCut about the time of the first frost. Fairly frost resistant, as are most of the cabbages.', 'veg'),
+(28, 'Kohlrabi', 'Brassica oleracea', 'Full Sun', 'Well drained', '6" per plant, 12" rows', 'Biennnnial', 'Direct sow about 4 weeks before the last frost date. Plant 1/2" deep, spacing seeds by about 1". Thin seedlings. Not very cold tolerant, a good frost can make it bolt. Extended temps under about 60 can force flowering. Or direct seed in the summer as space becomes available for a fall harvest. ', 'Kohlrabi is a tasty vegetable that looks like Sputnik. Eat like broccoli stems or turnips. ', 'veg'),
+(29, 'Leeks', 'Allium porrum', 'full', 'Rich', '4-6", rows 18"', 'Binneal', 'Start seeds 8-10 weeks before the last frost date, sow seeds 1/4" deep 1/2" apart. Harden off well. At your last frost date, set transplants in the garden. Bury them quite deep, 8" or so. Ideally your seedlings will be 8-12" tall, and you can bury them so that only a couple inches sticks out of the soil. ', 'Leeks are expensive at the store, but take up very little space in the garden. Mound dirt around them as they grow to keep their stems white. \r\nLeeks need consistent moisture and cannot compete with weeds, so they need ongoing attention through their season. ', 'veg'),
+(30, 'Lettuce', 'Lactuca sativa', 'Full Sun to light shade', 'Well drained', '12" apart, 12-18" rows', 'Annual', 'Direct sow as soon as soil can be worked in the spring. Sow at a very shallow depth, as seeds need light to germinate. Can be left at 6-8" spacing for leaf varieties. Use row covers to protect seedlings from cold. ', 'You can make successive plantings every week or two to stagger your harvest. Lettuce will bolt in hot weather, especially head varieties. Soil must be kept moist, as lettuce has a very shallow root system. Fall crops must be harvested before the first frost, as adult plants are not tolerant of freezing. ', 'veg'),
+(31, 'Cantaloupe (Muskmelon)', 'Cucumis melo', 'Full Sun', 'Sandy', 'hills, 18-36" apart', 'Annual', 'Direct sow after all danger of frost has passed. Sow three to four seeds in each hill, thin to two plants per hill as they grow. \r\n', 'Cantaloupe can be trained onto trellises, but provision must be made to support the melons as they ripen. Fruits should be kept off the ground in any case, they can be gently propped onto a board or paving stone to finish growing. Harvest when fruit starts to have a melon smell. ', 'veg'),
+(32, 'Melon', 'Cucumis melo', 'Full Sun ', 'Sandy', 'hills, 18-36" apart', 'Annual', 'Direct sow after all danger of frost has passed. Sow three to four seeds in each hill, thin to two plants per hill as they grow. \r\n', 'Melons can be trained onto trellises, but provision must be made to support the melons as they ripen. Fruits should be kept off the ground in any case, they can be gently propped onto a board or paving stone to finish growing. Harvest when fruit starts to have a melon smell. ', 'veg'),
+(33, ' Watermelon', 'Citrullus lanatus', 'Full Sun', 'Sandy', 'hills 24-36" apart', 'Annual', 'Direct sow after all danger of frost has passed. Sow three to four seeds in each hill, thin to one or plant per hill as they grow. \r\n', 'Watermelon grow wide vines. They can be allowed to spread, but the fruit should be kept off the ground. They can be gently propped on boards or paving stones as they develop. ', 'veg'),
+(34, 'Okra (Gumbo)', 'Abelmoschus esculentus', 'Full Sun', 'Well Drained', '36", 3-5'' between rows', 'Annual', 'Start seeds indoors three to four weeks before your last expected frost. Do not set out in the garden until the weather has warmed up significantly, Okra is extremely sensitive to frost and will pout in cold weather. Take care to not damage sensitive roots when transplanting.', 'Okra plants will grow to be 7-9'' tall in one season. Once the plants begin producing, they should be harvested daily until the first frost. Most varieties are best when picked fairly young, though mature pods can be used in soups or curries. Okra freezes well, simply harvest and freeze in a freezer bag. ', 'veg'),
+(35, 'Parsnips', 'Pastinaca sativa', 'Full Sun', 'Loose, rich, deeply worked', '3", 6" rows', 'Biennnnial', 'Direct sow as soon as soil can be worked. Loosen soil to a depth of 24". Sow 1/2" deep, 1" apart. Keep soil moist continually, seeds may take more than two weeks to germinate. Thin to 3" apart when seedlings are 6" tall. Parsnips like a lot of organic amendments. ', 'Parsnips mature in about 120 days, but they become tastier if left in the ground until after the first hard frost. You can overwinter them by covering heavily with mulch, then harvesting through the winter and early spring. Finish harvest before new growth begins. ', 'veg'),
+(36, 'Peas', 'Pisum sativum', 'Full Sun to partial shade', 'Sandy raised beds for early crops, heavier soil for fall crops.', '3", rows 2'' apart', 'Annual', 'Direct sow as soon as you can work the soil. Raised beds are ideal, as they warm up faster. Plant seeds 1-2" deep, 1" apart. Erect a trellis or pole for vining types. Soil must be kept moist but not waterlogged. Avoid excess watering during flowering. Sow fall crops 8-10 weeks before first frost date. Fall crops must be kept protected from the sun when they are young. ', 'Peas are tricky and delicate plants. They do well interplanted with fast growing cool weather crops like radishes or spinach. Do not plant peas in the same spot more than once every four years, to avoid root rot. ', 'veg'),
+(37, 'Peppers', 'Capsicum annuum', 'Full Sun', 'Rich and deeply worked, heavy in organics', '12-18", 24" rows', 'Annual', 'Start indoors 8-10 weeks before the last frost date. Start them three to a pot, then thin the weakest seedling. Leave the remaining two to grow as a single plant. Harden off 10 days before planting. Transplant after the soil has warmed in the spring. ', 'Peppers are a warm weather crop, in the nightshade family along with Tomatoes and Eggplants. Being a tropical plant, they want a lot of water, but don''t like waterlogged soil. Water often, in moderation. Mulch heavily, and stake or use tomato cages to protect these delicate plants when they are laden with heavy fruit. ', 'veg'),
+(38, 'Tomatoes', 'Solanum lycopersicum', 'Full Sun ', 'Rich and deeply worked, heavy in organics', '30-48", 48" rows', 'Annual', 'Start indoors 6-8 weeks before the last frost date. Start them three to a pot, then thin the weakest seedling. Leave the remaining two to grow as a single plant. Harden off 10 days before planting. Transplant after the soil has warmed in the spring. ', 'Tomatoes are a warm weather crop, in the nightshade family along with peppers and eggplants. Being a tropical plant, they want a lot of water, when setting fruit tomato plants want as much as 1" of rain per day. Mulch heavily, and using tomato cages or stakes is essential. Even with this, a good tomato plant is a barely contained chaos of vines and fruit. There are entire books devoted to growing tomatoes, so I encourage you to research them further.', 'veg'),
+(39, 'Radicchio', 'Cichorium intybus', 'Full Sun or light shade', 'Fertile and rich', '12-15", 12-18" rows', 'Perennial', 'Plant up to four weeks before the last frost date, work the soil well adding generous amounts of aged manure. Plant 1/4" deep. Radicchio is a perennial, so should return year after year once established.', 'Radicchio can be a confusing vegetable for anyone not familiar with it. It is a leafy salad green, and not related the radish even though the names are similar. Radicchio is also sometimes called Italian chicory to further complicate things, though it is closely related.\r\n\r\nThe leaves are usually deep red with bright white ribs, and it grows a lot like a head of cabbage. Some varieties produce a tight head, and some are leafier. It has strong tasting leaves that can be noticeably bitter when eaten raw, though that is still the most common way to use radicchio. The flavor is much milder if you cook it.', 'veg'),
+(40, 'Radish', 'Raphanus sativus', 'Full Sun', 'Loose and rich', '2-3", 6" rows', 'Biennnnial', 'Plant radishes as early as 2 weeks before the last frost date. Stagger plantings to stagger harvest. Interplanting with carrots is traditional, as the growing radishes serve to mark the carrot rows and protect the tiny carrot sprouts. ', 'Many radishes mature in 30-60 days, so they will be among the first things to come out of your garden in the spring. Radishes do well inserted in between other plants in the garden, to come out before the larger plants need the space.', 'veg'),
+(41, 'Rhubarb', 'Rheum rhbarbarum', 'Full Sun ', 'Very rich, apply composted manure', '4'' spacing', 'Perennial', 'Plant one year crowns in the early spring while the roots are still dormant. Dig a very large hole, and plant the tops of the roots 1-2" beneath the surface. ', 'Rhubarb is a perennial, so it will return year after year once established. Do not harvest the first year. Apply well composted manure annually. \r\nOnly the stalks are edible, do not consume the leaves. ', 'veg'),
+(42, 'Rutabagas', 'Brassica napus', 'Full Sun or light shade', 'Well drained, loose. Tolerates low fertility', '6" per plant, 1-2'' rows', 'Annual', 'Plant 2" apart, 1/2" deep in early to mid summer, about 90 days before the first expected frost date. Thin seedlings. ', 'Sustained high temps may cause root cracking. Harvest after the first frost. Easy to grow. ', 'veg'),
+(43, 'Salsify', 'Tragopogon', 'Full Sun ', 'Friable, open soil free of stones', '3-4", 18-24" rows', 'Binneal', 'Direct sow 2 weeks before last expected frost date. Sow 1" deep, 4" apart. Must be kept moist until seedlings are well established. \r\nAlternately, they can be started indoors and transplanted when the seedlings are 3" tall. ', 'Salsify requires 120 to 150 days to mature. May be harvested in the fall, gently fork up the roots, which will be a foot or more long and brittle. Take care not to break them if they are going to be stored. Store as carrots or beets. ', 'veg'),
+(44, 'Spinach', 'Spinacia oleracea', 'Full Sun or light shade', 'Rich, deeply worked', '6" per plant, 12-18" rows', 'Annual', 'Direct sow as soon as the soil is workable. Thin seedlings. Stagger plantings to stagger harvest. Spinach will not tolerate hot weather. Plant for a fall harvest in 6 weeks before first frost date in the fall. ', 'Harvest when leaves are of a size to your liking. You can cut the whole plant or cut only the oldest outside leaves, leaving the inner leaves to continue growing. \r\nSavoy types are especially hard to clean, though all types need to be washed well before eating.', 'veg'),
+(45, 'Squash, Summer', 'Cucurbita pepo', 'Full Sun', 'Rich and heavy in organic matter', '3'' in all directions', 'Annual', 'A week after the last frost date, sow six seeds 1/2" deep in a circle in the top of a hill. Thin to two seedlings per hill', 'Squash will cross pollinate with other squash plants. This will not effect this years fruit, but will effect saved seeds. Vines will spread widely, it is important to prop developing fruit up off the soil using a board or a paving stone. ', 'veg'),
+(46, 'Squash, Winter', 'Cucurbita (many varieties)', 'Full Sun to partial shade', 'Rich and heavy in organic matter', '6-8'' space between hills', 'Annual', 'A week after the last frost date, sow six seeds 1/2" deep in a circle in the top of a hill. Thin to two seedlings per hill', 'Squash will cross pollinate with other squash plants. This will not effect this years fruit, but will effect saved seeds. Vines will spread widely, it is important to prop developing fruit up off the soil using a board or a paving stone. ', 'veg'),
+(47, 'Strawberries', 'Fragaria ananassa', 'Full Sun', 'Well drained, deeply worked with plenty of organic material', '24", 4'' rows', 'Perennial', 'It is important to start with good, nursery bought strawberry plants and not with hand me downs. Mother plants will send out runners to create a mat, let them fill up your space. ', 'Older strawberry plants lose their vigor over time and should be replaced every four or five years. ', 'veg'),
+(48, 'Swiss Chard', 'Beta vulgaris subsp. cicla', 'Full Sun ', 'Blend 2-4" compost into the top 6" of soil. ', '6-8"', 'Annual', 'Direct sow 1/2" deep in spring, or in mid summer for a fall crop. ', 'Snip and eat leaves as they reach your desired size. Mulch heavily to keep weeds down and keep soil moist. ', 'veg'),
+(49, 'Tomatillo', 'Physalis ixocarpa', 'Full Sun', 'Well drained', '36", 36-48" rows', 'Annual', 'Start indoors 6-8 weeks before last frost date. Harden off and transplant after the soil is warm. Plant deeply, as they will sprout roots along the stem.', 'Plants will grow 3-4'' tall and sprawling, so tomato cages are recommended. They produce heavily, so two to four plants should be enough for fresh eating. ', 'veg'),
+(50, 'Potato', 'Solanum tuberosum', 'Full Sun ', 'Sandy and well drained', '12-24", 3'' rows', 'Annual', 'Dig a 6-8" deep trench, and plant cut up potato every 12-15" along it, eye side up. Cover with 4" of soil.', 'Continue covering roots with soil as they grow to prevent potatoes from turning green. \r\nAt harvest, use a garden fork, trying not to be too intrusive and gently fork out potatoes. Only harvest what you plan to eat that day for fresh eating. For storage, leave until 2 weeks after the plants have died back. Then dig out potatoes and cure before transferring to a root cellar.', 'veg'),
+(51, 'Sweet potato', 'Ipomoea batatas', 'Full Sun', 'loose, well drained. Tolerates poor fertility.', '9-18", 36-48" rows', 'Annual', 'Purchase slips, transplant 3-4" deep into garden after soil has warmed in the spring.', 'Harvest when the plants start to turn yellow, or leave in the ground. Finish harvest before the first frost. Fork gently out of the ground, trying not to nick the skin. Tubers can grow up to a foot from the plant. Allow to cure for several hours before transferring to a root cellar.\r\nNOTE: Sweet potatoes are not the same as Yams. Sweet potatoes generally have moist orange flesh and a sweet taste.  ', 'veg'),
+(52, 'Yam', 'Dioscorea', 'Full Sun ', 'Soft, loose, rich soil', '18", 24" rows', 'Annual', 'Plant sprout end after the last frost date, and after soil has started to warm. ', 'Harvest after vines start to die back. Use a garden fork to gently loosen soil, taking care not to damage the tubers skin. Allow to cure before transferring to a root cellar. \r\n\r\nNOTE: Yams are not the same as sweet potatoes. Yams are generally white fleshed and bland. They are uncommon in the US. ', 'veg'),
+(53, 'Turnips', 'Brassica rapa rapa', 'Full Sun', 'Well drained, loosened to 12-18"', '3-4"', 'Annual', 'Direct sow 3 weeks before the last frost date. Plant 1/4-1/2" deep, scattering seeds widely. Thin seedlings.', 'Mulch heavily when plants are 5" tall. Turnips are a cool weather crop that turn bitter in hot weather. Harvest greens when they are large enough to eat. If you plan to eat the root, only remove 2-3 leaves per plant. Harvest roots when they are 1-3" in diameter. Cut greens off of roots immediately after harvesting. ', 'veg'),
+(54, 'Obscure', 'This', 'that', 'the other', 'close!', 'for=eva', 'planting directions.\r\nPlant lots of these', 'I lvoe these. vera much. Notes', 'ChainRingTattoo'),
+(55, 'Angelica', 'Apiaceae', 'Light shade', 'Well drained', '3-4'' between plants', 'Biennnnial', 'Start indoors, transplant when seedlings are less than 4" tall. \r\nUse the root after one year or two years.', 'Angelica root is commonly used in Gin and other liquors. Also used medicinally. ', 'herb'),
+(56, 'Anise', 'Pimpinella anisum', 'Full Sun ', 'Well drained', '2-3'' rows', 'Biannual', 'Mix seed with sand, sow along a line, 1/2" deep. Water well until plants are established.', 'Anise is grown for it''s seeds, which taste very similar to licorice. It is well known to attract dogs, and is commonly used in dog-napping operations.', 'herb'),
+(57, 'Basil', 'Ocimum basilicum', 'Full Sun', 'Rich, well drained.', '12-18" ', 'Annual', 'Sow outdoors after threat of frost has passed, or start indoors. ', 'Basil is easy to grow and should be a staple in any garden. Fresh basil can be used in nearly any dish. ', 'herb'),
+(58, 'Pie tree', 'NONE', 'ANY', 'some', '10''', 'Perinneal', 'planting directions', 'Notes', 'Pushkin'),
+(59, 'Sage', 'Salvia Lamiaceae', 'Full Sun or light shade', 'Well drained', '6-12"', 'Perennial, Annual in colder climates', 'Start indoors 6-8 weeks before last frost, or outdoors about the time of the last frost. ', 'Sage is easy to grow and is often used in ornamental plantings. ', 'herb'),
+(60, 'Cilantro (Coriander)', 'Coriandrum sativum', 'Full Sun or light shade', 'Well drained', '6-8", 12" rows', 'Annual', 'From the time of sowing, cilantro leaves can be harvested in 3-4 weeks, coriander seeds can be harvested in about 45 days. Stagger plantings to stagger harvest.', 'Cilantro wants a cool environment, it will bolt in hot weather. It will do better in the shade in summer in warm areas. ', 'herb'),
+(61, 'Cumin', 'Cumin cyminum', 'Full Sun', 'Well drained, rich', '4" ', 'Annual', 'Start indoors 4 weeks before last frost date. Sow about 1/4" deep in pots. Transplant outdoors after danger of frost has passed. ', 'Collect seed heads in fall. Dry well.', 'herb'),
+(62, 'Parsley', 'Petroselinum crispum', 'Full Sun or light shade', 'Well drained, fertile', '8-10"', 'Biennial grown as an annual', 'Direct sow outdoors after soil has warmed up. Seeds may take up to 6 weeks to germinate and sprout. ', 'Begin harvesting as soon as plants show vigorous growth. Snip from the outside, it should continue producing. \r\nParsley does well in containers.', 'herb'),
+(63, 'Licorice', 'I don''t care', 'please', 'needed.', '18&quot;', 'Perinneal', 'planting directions', 'Notes', 'Pushkin');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sown`
+--
+
+CREATE TABLE `sown` (
+`id` int(18) NOT NULL,
+  `plantID` smallint(3) unsigned NOT NULL,
+  `user` varchar(28) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `germination` varchar(12) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `transplant` varchar(12) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `catnum` varchar(36) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Unknown',
+  `seedyear` varchar(12) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'n/a',
+  `numplanted` smallint(3) NOT NULL DEFAULT '1',
+  `variety` varchar(64) NOT NULL DEFAULT 'unknown',
+  `notes` mediumtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=MyISAM AUTO_INCREMENT=97 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `sown`
+--
+
+INSERT INTO `sown` (`id`, `plantID`, `user`, `germination`, `transplant`, `catnum`, `seedyear`, `numplanted`, `variety`, `notes`) VALUES
+(82, 0, 'bonehead3', NULL, NULL, 'Unknown', 'n/a', 1, 'example', 'This is your frst sample plant'),
+(83, 0, 'bonehead4', NULL, NULL, 'Unknown', 'n/a', 1, 'example', 'This is your frst sample plant'),
+(85, 0, 'bonehead6', NULL, NULL, 'Unknown', 'n/a', 1, 'example', 'This is your frst sample plant. use the button to the side to edit or delete. Use the menu along the top to add more.'),
+(94, 0, 'Grimbane', NULL, NULL, 'Unknown', 'n/a', 1, 'example', 'This is your frst sample plant. use the button to the side to edit or delete. Use the menu along the top to add more.'),
+(96, 11, 'Pushkin', '', '', 'Catalogue number', 'n/a', 1, 'varietal', 'Yeah. I''m not going to grow broccoli.'),
+(95, 58, 'Pushkin', '', '3/15/15', 'none', 'n/a', 5, 'varietal', 'I love PIE'),
+(92, 55, 'Pushkin', '1/21/2015', '5/15/15', 'Catalogue number', 'n/a', 1, 'varietal', 'Yay, Gin'),
+(93, 62, 'Pushkin', 'Here', 'Now', 'YES', 'n/a', 4, 'GIRANT', 'notes notes notes notes'),
+(60, 46, 'Jeff', '', '', 'n/a', '', 6, 'Butternut', 'Planted six hills along the north side of the lot in row A.'),
+(61, 38, 'Jeff', '', '', 'Bedding plants', '', 4, 'Better boys', 'Planting a row of four. They will be row B.'),
+(62, 21, 'Jeff', '', '', 'Bedding plants', '', 0, 'Don', 'notes'),
+(65, 5, 'ChainRingTattoo', '', '', 'Catalogue number', 'n/a', 2, 'varietal', 'notes'),
+(80, 5, 'gonzo', '', '', 'Catalogue number', 'n/a', 1, 'varietal', 'notes'),
+(68, 57, 'Pushkin', '', '', 'Catalogue number', 'n/a', 1, 'varietal', 'notes'),
+(57, 5, 'ChainRingTattoo', '2015-01-30', '', 'baker creek 001', '', 15, 'purple queens', 'Planted along fence.'),
+(72, 59, 'Pushkin', '2015-01-21', '', 'Baker creek herb1', 'n/a', 4, 'none', 'Planted four plants along the fence. '),
+(69, 58, 'Pushkin', '', '', 'Catalogue number', 'n/a', 1, 'varietal', 'notes'),
+(70, 55, 'Pushkin', '', '', 'Catalogue number', 'n/a', 1, 'varietal', 'notes'),
+(71, 21, 'Pushkin', '', '', 'Catalogue number', 'n/a', 1, 'varietal', 'notes'),
+(47, 5, 'Pushkin', '', '', 'Catalogue number', '', 1, 'varietal', 'notes'),
+(74, 63, 'Pushkin', '', '', 'Catalogue number', 'n/a', 1, 'varietal', 'notes'),
+(73, 36, 'Pushkin', '2015-01-21', '2015-03-15', 'XXX', 'n/a', 35, 'varietal', 'I don''t even like growing peas.'),
+(56, 38, 'Pushkin', '', '', 'Catalogue number', '', 0, 'varietal', 'notes'),
+(81, 21, 'gonzo', '2015-01-20', '', 'Catalogue number', 'n/a', 4, 'Green globe', 'notes'),
+(76, 6, 'Chainringtattoo', '', '', 'Catalogue number', 'n/a', 1, 'varietal', 'notes'),
+(78, 57, 'gonzo', '2015-01-15', '2015-02-26', 'Burpee 001', 'n/a', 10, 'green knob', 'notes go here. Lots of notes. \r\n\r\nALLO!\r\n\r\nFnord.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `todo`
+--
+
+CREATE TABLE `todo` (
+`id` int(6) unsigned NOT NULL,
+  `user` varchar(28) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `item` mediumtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `dueDate` varchar(12) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'None listed'
+) ENGINE=MyISAM AUTO_INCREMENT=65 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `todo`
+--
+
+INSERT INTO `todo` (`id`, `user`, `item`, `date`, `dueDate`) VALUES
+(1, '2', 'Make sure to start Eggplants and Tomatoes!', '2014-12-31 21:23:53', '2015-01-31'),
+(61, 'Grimbane', 'Sample to do list item', '2015-01-22 15:15:57', 'None listed'),
+(52, 'Pushkin', ' List item goes here ', '2015-01-21 21:49:14', '2015-01-21'),
+(57, 'Pushkin', 'X', '2015-01-21 21:49:57', '2015-04-09'),
+(48, 'bonehead6', 'Sample to do list item', '2015-01-21 21:31:48', 'None listed'),
+(62, 'Pushkin', 'I like firefox. \r\n\r\n/not/', '2015-01-22 15:19:56', '1/12/15'),
+(40, 'ChainRingTattoo', 'quick note', '2015-01-14 21:55:35', ''),
+(23, 'Pushkin', 'Hey, I can put a whole bunch here! Look at me putting bunches and buncshe  Wow, the end of this line is awfully far away. Dam, it doen''t wrap. I may as well make it one line.', '2015-01-12 17:05:00', ''),
+(38, 'ChainRingTattoo', ' List item goes here ', '2015-01-14 21:55:23', '2015-01-21'),
+(25, 'Pushkin', 'Bacon ipsum dolor amet prosciutto strip steak ham hock salami hamburger kielbasa. Doner brisket salami, tenderloin andouille strip steak fatback drumstick jowl ham hock porchetta. Cupim frankfurter kevin short ribs t-bone, pastrami ham hock biltong chicken. Doner chuck pig, turkey t-bone meatball pork drumstick leberkas boudin ham tenderloin sirloin. Cow pig flank tri-tip kevin.', '2015-01-12 17:59:55', '2015-02-28'),
+(29, '', '', '2015-01-13 21:00:40', ''),
+(43, 'Jeff', 'Start tomato plants', '2015-01-18 16:29:32', '2015-01-31'),
+(58, 'Pushkin', ' List item goes here ', '2015-01-22 15:03:50', ''),
+(34, 'ChainRingTattoo', ' To do list here ', '2015-01-13 21:05:48', ''),
+(35, 'ChainRingTattoo', 'This works?\r\n', '2015-01-13 21:05:55', ''),
+(36, 'ChainRingTattoo', ' To do list here ', '2015-01-13 21:06:44', ''),
+(37, 'ChainRingTattoo', ' To do list here ', '2015-01-13 21:07:03', ''),
+(59, 'Skullcrusher', 'Sample to do list item', '2015-01-22 15:04:42', 'None listed'),
+(60, 'Pushkin', ' List item goes here ', '2015-01-22 15:14:52', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `userplants`
+--
+
+CREATE TABLE `userplants` (
+`plantID` int(3) unsigned NOT NULL,
+  `name` varchar(28) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `genus` varchar(28) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unknown',
+  `sun` varchar(36) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unknown',
+  `soil` varchar(180) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unknown',
+  `spacing` varchar(36) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unknown',
+  `lifespan` varchar(36) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unknown',
+  `time` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `notes` mediumtext NOT NULL,
+  `username` varchar(32) NOT NULL
+) ENGINE=MyISAM AUTO_INCREMENT=55 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `userplants`
+--
+
+INSERT INTO `userplants` (`plantID`, `name`, `genus`, `sun`, `soil`, `spacing`, `lifespan`, `time`, `notes`, `username`) VALUES
+(54, 'Rhubarb', 'This', 'that', 'the other', 'close!', 'for=eva', 'planting directions', 'Notes', 'ChainRingTattoo');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+`userID` smallint(6) unsigned NOT NULL,
+  `username` varchar(28) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(64) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(64) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `zone` smallint(2) unsigned NOT NULL DEFAULT '6'
+) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`userID`, `username`, `email`, `password`, `zone`) VALUES
+(1, 'Pushkin', 'This here!', 'yes', 6),
+(2, 'ChainRingTattoo', 'montferrat@yahoo.com', 'Anneisgreat', 6),
+(3, 'TheRedScare', 'heythere', 'red', 0),
+(32, 'bonehead5', '', 'bone', 0),
+(31, 'bonehead4', '', 'bone', 0),
+(30, 'bonehead3', '', 'bone', 0),
+(29, 'bonehead2', '', 'bone', 0),
+(28, 'bonehead', '', 'bone', 0),
+(26, 'herp', '', 'derp', 0),
+(27, 'gonzo', '', 'gonzo', 0),
+(22, 'Jeff', 'I don''t want to.', 'jeff', 0),
+(21, 'Brian', 'brian.romine@gmail.com', 'psilon', 0),
+(33, 'bonehead6', '', 'bone', 0),
+(34, 'Skullcrusher', '', 'skull', 6),
+(35, 'Grimbane', '', 'Grim', 6);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `plants`
+--
+ALTER TABLE `plants`
+ ADD PRIMARY KEY (`plantID`), ADD UNIQUE KEY `name` (`name`);
+
+--
+-- Indexes for table `sown`
+--
+ALTER TABLE `sown`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `todo`
+--
+ALTER TABLE `todo`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `userplants`
+--
+ALTER TABLE `userplants`
+ ADD PRIMARY KEY (`plantID`), ADD UNIQUE KEY `name` (`name`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+ ADD PRIMARY KEY (`userID`), ADD UNIQUE KEY `username` (`username`,`email`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `plants`
+--
+ALTER TABLE `plants`
+MODIFY `plantID` int(3) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=64;
+--
+-- AUTO_INCREMENT for table `sown`
+--
+ALTER TABLE `sown`
+MODIFY `id` int(18) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=97;
+--
+-- AUTO_INCREMENT for table `todo`
+--
+ALTER TABLE `todo`
+MODIFY `id` int(6) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=65;
+--
+-- AUTO_INCREMENT for table `userplants`
+--
+ALTER TABLE `userplants`
+MODIFY `plantID` int(3) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=55;
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+MODIFY `userID` smallint(6) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=36;

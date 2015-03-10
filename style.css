@@ -1,0 +1,163 @@
+/*
+D1DDD0	off white
+81AC7D	Grey/green
+274024	very dark green
+0A4E03	hunter green
+30FC1B	Neon Green
+*/
+
+html
+{
+    background-color: #E1E1E1;
+    color: #274024;
+}
+
+.topper
+{
+    height: 6%;
+    margin-top: -5px;
+    margin-bottom: -15px;
+}
+#icon
+{
+    border: 1px solid #274024;
+    display: block;
+    float: left;
+    height: 90px;
+    width: auto;
+    
+}
+
+a
+{
+    color: #0A4E03;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover
+{
+    color: #809980;
+}
+
+h1
+{
+    font-size: 2.2em;
+    text-align: center;
+    padding: 7px; 
+}
+
+h2
+{
+    font-size: 1.8em;
+    text-align: center;
+    
+}
+
+fieldset
+{
+    display: block;
+    margin: auto;
+    max-width: 18%;
+    margin-top: 15px;
+}
+.login
+{
+    text-align: center;
+    padding: 3px;
+}
+
+.dir
+{
+    width: 50%;
+}
+.note
+{
+    width: 50%;
+}
+.space
+{
+    text-align: center;
+}
+
+.title
+{
+    border-bottom-width: 2px;  
+    border-bottom-style: solid;
+    border-bottom-color: #274024;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.menu
+{
+    display: block;
+    text-align: center;
+    border: 1px solid #0A4E03;
+    font-size: 1.2em;
+    background-color: #0A4E03;
+    margin-top: 20px;
+}
+
+    
+.menu a
+{
+    padding: 2%;
+    color: #E1E1E1; 
+}
+
+.menu a:hover
+{
+    color: #81AC7D;
+}
+
+p
+{
+    font-size: 1.3em;
+    color: #274024;
+    text-align: center;
+    max-width: 50%;
+    margin: auto;
+}
+
+td
+{
+    padding: 3px;
+    padding-bottom: 6px;
+    
+}
+
+.message
+{
+    padding-top: 2%;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+.current
+{
+    /*margin-top: -5%;*/
+}
+
+.note
+{
+    width: 65%;
+    
+}
+
+.butt
+{
+    width: 125px;
+    
+    font-size: 1em;
+}
+
+.hide
+{
+    display: none;
+}
+
+#history
+{
+    /*margin-top: -300px;*/
+}
